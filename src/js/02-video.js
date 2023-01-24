@@ -15,8 +15,8 @@ function writeCurrenttime(data) {
 }
 
 function getCurrenttime() {
-    if (STORAGE_KEY) {
         const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
         const parsedTime = JSON.parse(saved);
         const time = parsedTime.seconds;
         player.setCurrentTime(time);
