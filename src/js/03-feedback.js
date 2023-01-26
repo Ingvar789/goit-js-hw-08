@@ -43,7 +43,7 @@ function textOutput() {
     const saved = localStorage.getItem(STORAGE_KEY);
     const parsed = JSON.parse(saved);
     if (saved) {
-        refs.input.value = parsed.email;
-        refs.textarea.value = parsed.message;
+        refs.input.value = parsed.email || '';
+        refs.textarea.value = parsed.message || '';
     }
 }
